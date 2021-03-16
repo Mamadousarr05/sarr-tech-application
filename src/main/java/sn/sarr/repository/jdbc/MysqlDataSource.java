@@ -14,7 +14,7 @@ public class MysqlDataSource implements sn.sarr.repository.jdbc.DataSource {
 
     public static final String DB_USER = "root";
     public static final String DB_PASSWORD = "";
-    public static final String NOM_BASE = "on_sarrtest_jdb";
+    public static final String NOM_BASE = "on_sarrtest_jdbc";
 
     public static final String IP = "localhost";
     public static final String PORT = "3306";

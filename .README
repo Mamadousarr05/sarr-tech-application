@@ -1,0 +1,26 @@
+DESCRIPTION
+Plateforme pour vente de materiels informatique  qui met en relation des  clients et des utilisateur.
+Les clients peuvent contracter en ligne avec une service de vente, et le noter après service fait.
+
+PROFILS UTILISATEUR  & Fonctionnalités:
+
+        - Admin
+            Créer utilisateurs
+            Bloquer utilisateurs
+            Ajouter produits
+            lister Produits
+            modifier produits (dans le cadre de la gestion des stocks)
+
+        - Clients (Personne physique, Entreprise)
+
+        - Service de vente
+            verifier la disponibilité des produits
+            enregistrer commande
+            modifier commande (pour les personnes physiques)
+            annuler commande
+            générer bon de commande
+
+        - Comptabilité
+            rechercher la commande
+            enregistrer le paiement
+            générer la facture (2 factures pour les entreprises)

@@ -49,25 +49,44 @@ public class jdbcBaseProduitRepository implements ProduitRepository {
     @Override
     public Produit findByid(int id) {
 
-            String query = "SELECT id, nom from prestation where id = ?";
-            try {
-                Connection connection = dataSource.createConnection();
-                PreparedStatement statement = connection.prepareStatement(query);
+        String query = "SELECT id, nom from prestation where id = ?";
+        try {
+            Connection connection = dataSource.createConnection();
+            PreparedStatement statement = connection.prepareStatement(query);
 
-                statement.setInt(1, id);
-                ResultSet rs = statement.executeQuery();
-                int retrievedId = rs.getInt("id");
+            statement.setInt(1, id);
+            ResultSet rs = statement.executeQuery();
+            int retrievedId = rs.getInt("id");
                 String retrievedDescription = rs.getString("description");
                 int retrievedQtt = rs.getInt("qttEnStock");
                 double retrievedPrixmin = rs.getDouble("prixMin");
                 double retrievedPrixuni = rs.getDouble("prixUnitaire");
                 Produit produit = new Produit(retrievedId, retrievedDescription,retrievedQtt,retrievedPrixmin,retrievedPrixuni);
                 return produit ;
-            }
-            catch (Exception ex){
-                ex.printStackTrace();
-            }
-            return null;
+        }
+        catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return null;
+//            String query = "SELECT id, nom from prestation where id = ?";
+//            try {
+//                Connection connection = dataSource.createConnection();
+//                PreparedStatement statement = connection.prepareStatement(query);
+//
+//                statement.setInt(1, id);
+//                ResultSet rs = statement.executeQuery();
+//                int retrievedId = rs.getInt("id");
+//                String retrievedDescription = rs.getString("description");
+//                int retrievedQtt = rs.getInt("qttEnStock");
+//                double retrievedPrixmin = rs.getDouble("prixMin");
+//                double retrievedPrixuni = rs.getDouble("prixUnitaire");
+//                Produit produit = new Produit(retrievedId, retrievedDescription,retrievedQtt,retrievedPrixmin,retrievedPrixuni);
+//                return produit ;
+//            }
+//            catch (Exception ex){
+//                ex.printStackTrace();
+//            }
+//            return null;
 
     }
 
